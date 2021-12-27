@@ -30,7 +30,7 @@ export default function Navbar() {
         <Link className='nav-link h6' to="/login">Login</Link>
         </li>
         <li className="nav-item">
-        <Link className='nav-link h6' to="/register">Register</Link>
+        <Link className='nav-link h6 text-primary' to="/register">Register</Link>
         </li></ul>
      
     )
