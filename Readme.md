@@ -1,5 +1,5 @@
 
-# OLX Clone
+# SHOPIFY
 
      > This is a Node-Express and reactjs APP (using MongoDB) web-service which helps user buy and Sell Products
 
