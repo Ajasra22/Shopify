@@ -104,11 +104,11 @@ Email: test@gmail.com
 password: aaa
 ```
 Upon logging in-
-* We can sell a product by visiting Sell section
-* We can purchase a product by vising Buy Section
+* User can sell a product by visiting Sell section
+* User can purchase a product by vising Buy Section
 * After buying a product it will be deleted from seller's list and added to cart of user
 * If a user add a product by selling it then he/she cannot sell it to themselves hence the application will not show the newly added product to Seller's Buy Section
-* We can purchase a product which is being sold by another user (Like original Olx App <b>;-)</b>  )
+* User can purchase a product which is being sold by another user (Like original Olx App <b>;-)</b>  )
 
 <h3 align="center">
    <b>Buy a Product</b>
