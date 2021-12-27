@@ -8,6 +8,7 @@ export default function Cards(post) {
     const navigate= useNavigate();
     const {userName} = useSelector(state=> state.Authenticated)
     const buyProduct=()=>{
+        post.setChange("Sell");
         dispatch(addtoCart(post,userName));
         
         dispatch(deletePost(post.id));

@@ -7,8 +7,8 @@ export default function Home() {
             <div className="row p-5">
             <div className='col d-md-flex justify-content-center text-start'>
             <div className='p-3  text-md-center '>
-            <p className='fs-1 h1'>Become a <span className="text-warning">Olx Member</span></p>
-                    <p className="fs-6 lead">OLX is the perfect online marketplace to buy and sell locally! No need to visit the flea market to find the best deals on pre-owned items! Here you’ll find a wide selection of like new products, from vintage clothes, antique furniture, used books, and retro games, to electronics, pre-owned cars and studios for rent!</p>
+            <p className='fs-1 h1'>Become a <span className="text-warning">Shopify Member</span></p>
+                    <p className="fs-6 lead">Shopify is the perfect online marketplace to buy and sell locally! No need to visit the flea market to find the best deals on pre-owned items! Here you’ll find a wide selection of like new products, from vintage clothes, antique furniture, used books, and retro games, to electronics, pre-owned cars and studios for rent!</p>
                     
                     <Link to="/login"><button className="shadow btn text-dark bg-light btn-lg rounded"> Sign in</button></Link>
             </div>  

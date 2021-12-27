@@ -10,6 +10,7 @@ export default function Buy() {
     let posts={};
     let auth;
     let count=0;
+    const [change,setChange]=useState('buy');
     const dispatch= useDispatch();
     const reducer_name = useSelector(state=> state);
     posts=reducer_name.fetch;
@@ -21,9 +22,10 @@ export default function Buy() {
     useEffect(()=>{
         dispatch(fetchPosts('admin'));
         dispatch(fetchCartPosts('admin'));
+        setChange("buy");
         console.log("Use Selector",posts);
         console.log("Buy userName",auth);
-    },[])
+    },[change])
     return (
         !count?<div className='container text-center p-3'>
             <div className='shadow border'><h1 className='text-center text-primary m-3'>No products to show</h1></div>
@@ -37,7 +39,7 @@ export default function Buy() {
                 {posts.map((post) => 
                          (post.creator===auth.userName?null:<Cards id={post._id} title={post.title}
                             price={post.price} category={post.category}
-                            image={post.selectedFile} creator={post.creator} />)
+                            image={post.selectedFile} creator={post.creator} setChange={setChange}/>)
                        
                 )}
                

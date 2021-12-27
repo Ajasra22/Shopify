@@ -1,5 +1,5 @@
 import axios from "axios";
-const url="http://localhost:5000/"
+const url="http://localhost:5000"
 export const setAuthTrue =(user,istrue)=> async (dispatch) =>{
     
         dispatch({type: 'AUTH',payload: {
@@ -12,7 +12,7 @@ export const setAuthTrue =(user,istrue)=> async (dispatch) =>{
 }
 export const addProduct= (product)=> async (dispatch)=>{
     try {
-        const {data}=await axios.post(`${url}addProduct`,product);
+        const {data}=await axios.post(`${url}/addProduct`,product);
         console.log("Posting a product for a user")
         dispatch({type: 'ADD_PRODUCT',payload: data});
         console.log(data);    
@@ -23,7 +23,7 @@ export const addProduct= (product)=> async (dispatch)=>{
 }
 export const fetchPosts =(userName)=> async (dispatch)=>{
     try {
-        const {data} =await axios.get("http://localhost:5000/fetchposts");
+        const {data} =await axios.get(`${url}/fetchposts`);
         console.log("Fetching Posts");
         dispatch({type: "FETCH_POST",payload: data});
     } catch (error) {
@@ -32,7 +32,7 @@ export const fetchPosts =(userName)=> async (dispatch)=>{
 }
 export const deletePost =(id)=> async (dispatch)=>{
     try {
-        const {data} = await axios.delete(`http://localhost:5000/deleteproduct/${id}`);
+        const {data} = await axios.delete(`${url}/deleteproduct/${id}`);
         console.log("Deleting posts message from api",data);
     } catch (error) {
         console.log(error)
@@ -41,7 +41,7 @@ export const deletePost =(id)=> async (dispatch)=>{
 export const addtoCart=(post,userName)=> async (dispatch)=>{
     try {
         post= {...post,creator: userName}
-        const {data} = await axios.post("http://localhost:5000/addtocart",post)
+        const {data} = await axios.post(`${url}/addtocart`,post)
         console.log("Adding product to the Cart",data)
     } catch (error) {
         console.log(error)
@@ -49,7 +49,7 @@ export const addtoCart=(post,userName)=> async (dispatch)=>{
 }
 export const fetchCartPosts =(user)=> async (dispatch)=>{
     try {
-        const {data} = await axios.get("http://localhost:5000/fetchcart");
+        const {data} = await axios.get(`${url}/fetchcart`);
         dispatch({type: 'FETCH_CART',payload: data});
         console.log("Fetching cart",data);
     } catch (error) {
