@@ -2,6 +2,10 @@
 # SHOPIFY
 
     > Built a fully responsive Nodejs and Reactjs based web-service on which user's can buy and sell products or used commodities
+
+
+Deployed Version - [SHOPIFY APP](https://reactshopify.netlify.app/)
+
 ### Tech stack used
     > Reactjs
     > Nodejs
